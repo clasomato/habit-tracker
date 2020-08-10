@@ -32,8 +32,21 @@ import Vue from 'vue/dist/vue.js';
       },
       openAddTile: function () {
 
+      },
+      clearTiles: function () {
+        app.coffeeCounter = 0
+        app.waterCounter = 0
+        localStorage.setItem("coffeeCounter", 0);
+        localStorage.setItem("waterCounter", 0);
+      },
+      openNav: function () {
+        console.log('nav open')
+        $('#navModal').show(500);
+      },
+      closeNav: function () {
+        $('#navModal').hide(500);
       }
-    }, // Methods ENDS
+     }, // Methods ENDS
     beforeDestroy: function () {
 
     } // Before destroy ENDS

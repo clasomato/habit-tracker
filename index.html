@@ -13,9 +13,30 @@
 	<div id="app">
 		<nav class="nav">
 			<div class="navMenu">
-				<img src="media/hamburger.png" alt="" style="width:15% !important" width="15%">
+				<img src="media/hamburger.png" alt="" style="width:15% !important" width="15%" id="navOpenToggle" @click="openNav">
 			</div>
 		</nav>
+
+		<div class="navModal" id="navModal">
+			<!-- <p  style="position:absolute; top:0; right:0;">Close</p> -->
+			<div class="navItem">
+				<img src="media/settings.png" alt="">
+			</div>
+
+			<div class="navItem">
+				<img src="media/close.png" alt="" @click="closeNav">
+			</div>
+
+			<div class="navItem" @click="clearTiles">
+				<h3>Clear Habit Tiles</h3>
+				<p>(dev tools)</p>
+			</div>
+
+			<div class="navItem">
+
+			</div>
+		</div>
+
 		<div class="container">
 			<div class="iconContainer">
 				<img src="media/plus.png" alt="">
