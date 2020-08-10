@@ -6,7 +6,7 @@
 
 	<link rel="stylesheet" type="text/css" href="dist/css/custom.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>News API</title>
+	<title>Habit Tracker</title>
 </head>
 <body>
 
@@ -21,13 +21,14 @@
 				<img src="media/plus.png" alt="">
 			</div>
 
-			<div class="iconContainer">
-				<img src="media/coffee.png" alt="" width="100%" style="width:50%; float:left;" @click="increment">
-				<h3 style="width:50%; float:right; text-align:center; font-size:2em;"> {{ increments[0] }} </h3>
+			<div class="iconContainer" @click="coffeeIncrement">
+				<img src="media/coffee.png" alt="" width="100%" style="width:50%; float:left;">
+				<h3 style="width:50%; float:right; text-align:center; font-size:2em;"> {{ coffeeCounter }} </h3>
 			</div>
 
-			<div class="iconContainer">
-				<h2>dsa</h2>
+			<div class="iconContainer" @click="waterIncrement">
+				<img src="media/water.png" alt="" width="100%" style="width:50%; float:left;">
+				<h3 style="width:50%; float:right; text-align:center; font-size:2em;"> {{ waterCounter }} </h3>
 			</div>
 
 
@@ -37,6 +38,10 @@
 	</div>
 	<!-- App ENDS -->
 
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="/dist/js/bundle.js"></script>
 

@@ -12,15 +12,55 @@ import Vue from 'vue/dist/vue.js';
     el: '#app',
     data: {
       message: 'Hello Vue!',
-      increments: [0, 0, 0, 0]
+      increments: [0, 0, 0, 0],
+      number: false,
+      coffeeCounter: 0,
+      socialMedia: 0,
+      cigarette: 0,
+      waterCounter: 0,
+      shows: 0,
+      alcahol: 0,
     },
     methods: {
-      increment: function () {
-        var number = (app.increments[0] = app.increments[0] + 1);
-        app.increments[0] = number;
-        console.log(app.increments);
+      coffeeIncrement: function () {
+        app.coffeeCounter ++;
+        localStorage.setItem("coffeeCounter", app.coffeeCounter);
+      },
+      waterIncrement: function () {
+        app.waterCounter ++;
+        localStorage.setItem("waterCounter", app.waterCounter);
+      },
+      openAddTile: function () {
+
       }
-    } // Methods ENDS
+    }, // Methods ENDS
+    beforeDestroy: function () {
+
+    } // Before destroy ENDS
   })
+
+  window.onbeforeunload = function(){
+      return localStorage.setItem("coffeeCounter", app.coffeeCounter);
+      return localStorage.setItem("waterCounter", app.waterCounter);
+  }
+
+
+  function getCoffeeIncrement () {
+    var cc = localStorage.getItem("coffeeCounter");
+    app.coffeeCounter = cc
+    console.log(cc)
+  }
+  function getWaterIncrement () {
+    var cc = localStorage.getItem("waterCounter");
+    app.waterCounter = cc
+    console.log(cc)
+  }
+
+
+
+
+  // Calling functions
+  getCoffeeIncrement()
+  getWaterIncrement()
 
 })(); // iffe ENDS
