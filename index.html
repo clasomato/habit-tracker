@@ -12,10 +12,6 @@
 
 	<div id="app">
 		<nav class="nav">
-			<div class="">
-				<!-- <p>Gok</p> -->
-			</div>
-
 			<div class="navMenu">
 				<img src="media/hamburger.png" alt="" style="width:15% !important" width="15%">
 			</div>
@@ -26,10 +22,8 @@
 			</div>
 
 			<div class="iconContainer">
-				<!-- <h2 style="padding:0; margin:0;">Coffee</h2> <br> -->
-				<img src="media/coffee.png" alt="" width="100%" style="width:50%; float:left;">
-				<h3 style="width:50%; float:right; text-align:center; font-size:2em;">2</h3>
-				<!-- <img src="media/stats.png" alt="" style="width:50%; float:left;"> -->
+				<img src="media/coffee.png" alt="" width="100%" style="width:50%; float:left;" @click="increment">
+				<h3 style="width:50%; float:right; text-align:center; font-size:2em;"> {{ increments[0] }} </h3>
 			</div>
 
 			<div class="iconContainer">
@@ -43,7 +37,8 @@
 	</div>
 	<!-- App ENDS -->
 
-	<!-- articles[0].author -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="/dist/js/bundle.js"></script>
+
 </body>
 </html>

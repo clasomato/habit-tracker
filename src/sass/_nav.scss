@@ -4,6 +4,13 @@
   width: 100%;
   margin-bottom: 5%;
 
+  background: linear-gradient(270deg, #773796, #2eb5ef);
+  background-size: 200% 200%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+
   img {
     float: right;
   }
